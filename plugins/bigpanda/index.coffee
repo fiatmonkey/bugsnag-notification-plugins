@@ -5,15 +5,15 @@ class BigPanda extends NotificationPlugin
 
         # Refer to http://docs.datadoghq.com/api/#events
         payload = {
-            app_key: config.api_key, # Event title; limited to 100 characters.
-            status: "warning", # null, # 'error', 'warning', 'info' 
-            host: "foobar.com", #null, # project name 
-            check: "ExceptionHandler Error", # null , # event trigger type - if 'info' ingore event?
-            MetaData: "Some Meta Data", #[], # extra information: production::DEV
-            ErrorLink: "http://fiatmonkey.com", #null, # link to error URL
-            description: "IF there really was an error...", # null, # trigger and trigger type?
+            app_key: config.api_key, # bigpanda api key.
+            status: null, # 'error', 'warning', 'info' 
+            host: null, # project name 
+            check: null , # event trigger type - if 'info' ingore event?
+            MetaData: [], # extra information: production::DEV
+            ErrorLink: null, # link to error URL
+            description: null, # trigger and trigger type?
         }
-        # Default text body... just give a link to the bugsnag error
+        # Default Error Link - custom attribute in bigpanda... just give a link to the bugsnag error
         payload.ErrorLink = "#{event.error.url}"
 
         # Add some tags
