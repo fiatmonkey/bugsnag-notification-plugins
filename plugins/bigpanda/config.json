@@ -1,0 +1,23 @@
+{
+    "name": "BigPanda",
+    "url": "https://www.bigpanda.io",
+    "actions": {
+        "create": "Post to BigPanda  event stream",
+        "new": "Add stream"
+    },
+
+    "supportedTriggers": "all",
+    "type": "communication",
+    "fields": [
+        {
+            "name": "api_key",
+            "label": "API Key",
+            "description": "A BigPanda API key.",
+            "link": "https://a.bigpanda.io/#/app/integrations/alertsapi/instructions/alertsapi",
+            "name": "access_token",
+            "label": "Access Token",
+            "description": "A BigPanda Authentication token. See Authenricaton value after Bearer for Key.",
+            "link": "https://a.bigpanda.io/#/app/integrations/alertsapi/instructions/alertsapi"
+        }
+    ]
+}
