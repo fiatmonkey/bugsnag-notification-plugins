@@ -45,7 +45,7 @@ class BigPanda extends NotificationPlugin
         console.log("API Key " +config.api_key)
         console.log("access_token " +config.access_token)
         @request
-            .post("https://demo-api.bigpanda.io/data/v2/alerts")
+            .post("https://api.bigpanda.io/data/v2/alerts")
             .set('Authorization', "Bearer "+config.access_token)
             .set('Content-Type', 'application/json')
             .timeout(4000)
