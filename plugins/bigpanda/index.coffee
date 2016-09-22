@@ -3,7 +3,7 @@ NotificationPlugin = require "../../notification-plugin"
 class BigPanda extends NotificationPlugin
     @receiveEvent = (config, event, callback) ->
 
-        # Refer to http://docs.datadoghq.com/api/#events
+        # Refer to https://bigpanda.io/bp_integrations/alert-rest-api/
         payload = {
             app_key: config.api_key, # bigpanda api key.
             status: null, # 'error', 'warning', 'info' 
